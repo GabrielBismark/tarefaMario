@@ -1,0 +1,31 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2>Lista de Animes</h2>
+            <hr>
+            <a href="/rota_animes/animes/add">
+                <button class="btn btn-success">Novo Anime</button></a>
+            {{#each animes}}
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4><b>ID:</b>{{_id}}</h4>
+                    <small><b>Nome:</b> {{nome}} </small><br>
+                    <small><b>Genero:</b> {{genero}} </small><br>
+                    <!--Botão para editar animes-->
+                    <a href="/rota_animes/editar_animes/{{_id}}">
+                        <button class="btn btn-success mt-3">
+                            Editar animes
+                        </button>
+                    </a>
+                    <!--botão para deletar animes -->
+                    <a href="/rota_animes/deletar_animes/{{_id}}">
+                        <button class="btn btn-danger mt-3">
+                            Deletar animes
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>

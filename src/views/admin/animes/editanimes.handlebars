@@ -1,0 +1,24 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h3> Editar Animes: </h3>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/rota_animes/animes/editar_animes" method="POST">
+                        {{#if anime}}
+                        <label for="_id">ID: </label>
+                        <input type="text" id="_id" name="_id" readonly="true" class="form-control"
+                            value="{{anime._id}}"><br>
+                        <label for="nome">Nome: </label>
+                        <input type="text" id="nome" name="nome" class="form-control" value="{{anime.nome}}"><br>
+                        <label for="genero">Genero: </label>
+                        <input type="text" id="genero" name="genero" class="form-control"
+                            value="{{anime.genero}}"><br>
+                        <button type="submit" class="btn btnsuccess">Editar anime</button>
+                    </form>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

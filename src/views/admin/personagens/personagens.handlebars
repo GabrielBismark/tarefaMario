@@ -1,0 +1,31 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2>Lista de personagens</h2>
+            <hr>
+            <a href="/rota_personagens/personagens/add">
+                <button class="btn btn-success">Novo Personagem</button></a>
+            {{#each personagens}}
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4><b>ID:</b>{{_id}}</h4>
+                    <small><b>Nome:</b> {{nome}} </small><br>
+                    <small><b>Função:</b> {{funcao}} </small><br>
+                    <!--Botão para editar personagens-->
+                    <a href="/rota_personagens/editar_personagens/{{_id}}">
+                        <button class="btn btn-success mt-3">
+                            Editar personagens
+                        </button>
+                    </a>
+                    <!--botão para deletar personagens -->
+                    <a href="/rota_personagens/deletar_personagens/{{_id}}">
+                        <button class="btn btn-danger mt-3">
+                            Deletar personagens
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
