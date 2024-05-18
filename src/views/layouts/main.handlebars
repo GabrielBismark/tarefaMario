@@ -11,10 +11,38 @@ está na pasta public -->
 alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
 KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>Animes</title>
+    <style>
+        .div-nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .div-nav a{
+            text-decoration: none;
+            color: black;
+            background-color: lightblue;
+            padding: 20px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        .div-nav a:hover{
+            background-color: rgb(96, 141, 156);
+        }
+    </style>
+    
 </head>
 
 <body>
     <div class="container mt-4">
+        <div class="div-nav">
+            <a href="/rota_animes/animes">
+                <h2>Animes</h2>
+            </a>
+            <a href="/rota_personagens/personagens">
+                <h2>Personagens</h2>
+            </a>
+        </div>
         {{{body}}}
     </div>
 </body>

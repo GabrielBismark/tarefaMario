@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.engine('handlebars', handlebars.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 //Remanejando Rotas de animes 
+app.use('/rota_personagens', rota_personagens);
 app.use('/rota_animes', rota_animes);
 const PORT = 8081;
 app.listen(PORT, () => {
